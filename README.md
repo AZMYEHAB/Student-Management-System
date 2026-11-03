@@ -43,7 +43,6 @@ Student-Management-System/
 ├── js/
 │   └── script.js
 ├── README.md
-└── .gitignore
 ```
 
 ## How to Run
