@@ -1,0 +1,102 @@
+/* Simple, responsive layout. The project is console-based, so the page stays quiet. */
+:root {
+  --bg: #eef1f6;
+  --surface: #ffffff;
+  --ink: #1b2433;
+  --muted: #5a6478;
+  --accent: #2b4acb;
+  --accent-dark: #1f37a0;
+  --console-bg: #1b2433;
+  --console-ink: #e6ebf5;
+  --line: #d5dbe6;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Segoe UI", system-ui, -apple-system, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 20px 64px;
+}
+
+h1 { font-size: clamp(1.7rem, 5vw, 2.4rem); line-height: 1.2; margin: 0 0 12px; }
+h2 { font-size: 1.15rem; margin: 0 0 8px; }
+p { margin: 0 0 12px; }
+
+.lead { color: var(--muted); max-width: 62ch; }
+.developer { color: var(--muted); font-size: 0.95rem; }
+
+code {
+  background: #dfe5f2;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-family: Consolas, "Courier New", monospace;
+  font-size: 0.9em;
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px;
+  margin-top: 24px;
+}
+
+button {
+  background: var(--accent);
+  color: #fff;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+button:hover { background: var(--accent-dark); }
+button:focus-visible { outline: 3px solid #9db0f5; outline-offset: 2px; }
+
+.status { margin: 14px 0 0; color: var(--muted); font-size: 0.95rem; }
+
+/* The console instructions get a dark panel, like the thing they describe */
+.console-help {
+  background: var(--console-bg);
+  border-color: var(--console-bg);
+  color: var(--console-ink);
+}
+.console-help .hint { color: #aeb8cc; margin: 14px 0 0; }
+
+.shortcuts { list-style: none; margin: 0; padding: 0; }
+.shortcuts li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 0;
+  border-bottom: 1px solid #323d52;
+}
+.shortcuts li:last-child { border-bottom: 0; }
+.shortcuts span { min-width: 140px; color: #aeb8cc; }
+
+kbd {
+  font-family: Consolas, "Courier New", monospace;
+  background: #2c374c;
+  border: 1px solid #44506a;
+  border-radius: 5px;
+  padding: 1px 8px;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .page { padding-top: 32px; }
+  section { padding: 18px; }
+  button { width: 100%; }
+}
