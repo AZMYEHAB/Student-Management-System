@@ -90,13 +90,13 @@ class Student {
    ========================================================================== */
 const studentsList = [
   // Passing student with good attendance                         -> avg 91.67
-  new Student(1001, "Ahmed Hassan", [92, 88, 95], 90),
+  new Student(1001, "Azmy Ehab", [92, 88, 95], 90),
   // Struggling (40-49), attendance OK -> passes after grace      -> avg 45
-  new Student(1002, "Mona Adel", [45, 42, 48], 85),
+  new Student(1002, "Ahmed Mohsen", [45, 42, 48], 85),
   // Struggling, avg 49 but attendance below 75%                  -> avg 49
-  new Student(1003, "Omar Khaled", [50, 49, 48], 70),
+  new Student(1003, "mohamed Elsayed", [50, 49, 48], 70),
   // Boundary case: avg exactly 50 and attendance exactly 75%     -> avg 50
-  new Student(1004, "Sara Mahmoud", [60, 50, 40], 75),
+  new Student(1004, "Noureen Ahmed", [60, 50, 40], 75),
 ];
 
 /* ==========================================================================
